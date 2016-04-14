@@ -1,4 +1,5 @@
 <?php
+	// Csak akkor fut, ha definiálva van az init függvény.
 	if ( !function_exists('init_db_tester_page') ) {
 		exit( 'No access...' );
 	}
