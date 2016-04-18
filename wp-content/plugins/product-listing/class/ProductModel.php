@@ -39,7 +39,7 @@ class ProductModel
 	}
 
 	// Frissítés.
-	public function update( $data = null, $where = '', $limit = 1 ) {
+	public function update( $data = null, $where = array(), $limit = 1 ) {
 		global $wpdb;
 
 		if ( is_null($data) ) {
@@ -53,7 +53,7 @@ class ProductModel
 		return $wpdb->update(
 			$this->table,
 			$data,
-			$where . " LIMIT $limit"
+			$where
 		);
 	}
 
