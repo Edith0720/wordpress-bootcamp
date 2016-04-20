@@ -25,6 +25,8 @@
  * @since Twenty Fifteen 1.0
  */
 
+include 'less_handler.php';
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  *
@@ -255,6 +257,8 @@ function twentyfifteen_scripts() {
 	wp_enqueue_style( 'twentyfifteen-ie7', get_template_directory_uri() . '/css/ie7.css', array( 'twentyfifteen-style' ), '20141010' );
 	wp_style_add_data( 'twentyfifteen-ie7', 'conditional', 'lt IE 8' );
 
+	wp_enqueue_style( 'less-output-style', get_template_directory_uri() . '/css/output.css', array(), date('YmdHis') );
+	
 	wp_enqueue_script( 'twentyfifteen-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20141010', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
