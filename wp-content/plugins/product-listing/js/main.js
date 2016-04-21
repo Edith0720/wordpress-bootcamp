@@ -14,7 +14,8 @@ productModule.controller( 'productListController',
 			$scope.url = window.ajaxOptions.ajaxurl+'?action=crud_action';
 			$http.get( $scope.url )
 				.then( function( serverResponse ) {
-					$scope.products = serverResponse.data;
+					$scope.products = serverResponse.data.productData;
+					$scope.translates = serverResponse.data.translates;
 				}, function( error ) {
 					console.error( error );
 				});

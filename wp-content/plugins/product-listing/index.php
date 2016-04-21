@@ -16,12 +16,22 @@ include 'class/insertjs.php';
 
 // CRUD kérések kezelése.
 function crud_action_callback() {
+
+	// Load translation.
+	load_plugin_textdomain(
+		'productlisting',
+		false,
+		ABSPATH . '/wp-content/languages/plugins'
+	);
+
 	include 'class/ProductModel.php';
 	include 'class/ProductController.php';
 	$controller = new ProductController();
 	wp_die();
+
 }
 add_action( 'wp_ajax_nopriv_crud_action', 'crud_action_callback' );
+add_action( 'wp_ajax_crud_action', 'crud_action_callback' );
 
 function add_product_list() {
 	ob_start();

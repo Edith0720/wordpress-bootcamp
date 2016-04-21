@@ -46,9 +46,28 @@ class ProductController
 				# code...
 				break;
 		}
-		
-		echo json_encode( $result );
-		wp_die();
+
+		$trans = $this->getTranslates();
+		$serverResponse = array(
+			'productData' => $result,
+			'translates' => $trans
+		);
+
+		echo json_encode( $serverResponse );
+	}
+
+	private function getTranslates() {
+
+		// Fordítások lekérése.
+		$trans = array( 
+			'Name' => __( 'Name', 'productlisting' ),
+			'Price' => __( 'Price', 'productlisting' ),
+			'Insdate' => __( 'Insdate', 'productlisting' ),
+			'Commands' => __( 'Commands', 'productlisting' ),
+			'Update' => __( 'Update', 'productlisting' )
+		);
+
+		return $trans;		
 	}
 
 	private function handleGet() {

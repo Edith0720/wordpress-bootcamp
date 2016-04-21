@@ -5,10 +5,10 @@
 			<thead>
 				<tr>
 					<th>#</th>
-					<th>Név</th>
-					<th>Ár</th>
-					<th>Hozzáadva</th>
-					<th>Műveletek</th>
+					<th>{{ translates.Name }}</th>
+					<th>{{ translates.Price }}</th>
+					<th>{{ translates.Insdate }}</th>
+					<th>{{ translates.Commands }}</th>
 				</tr>
 			</thead>
 			<tbody>
