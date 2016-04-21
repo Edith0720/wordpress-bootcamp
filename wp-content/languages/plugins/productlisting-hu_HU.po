@@ -36,3 +36,13 @@ msgid "Update"
 msgid_plural "Update"
 msgstr[0] "Frissítés"
 msgstr[1] "Frissítés"
+
+msgid "You are not logged in. Please click the login button below."
+msgid_plural "You are not logged in. Please click the login button below."
+msgstr[0] "Nem vagy belépve. Kérlek kattints az alább látható bejelentkezés gombra."
+msgstr[1] "Nem vagy belépve. Kérlek kattints az alább látható bejelentkezés gombra."
+
+msgid "login"
+msgid_plural "login"
+msgstr[0] "bejelentkezés"
+msgstr[1] "bejelentkezés"
